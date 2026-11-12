@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "acquired_at_utc": "2026-11-11",
+  "acquisition_method": "GitHub raw content HTTPS download",
+  "repository": "https://github.com/zhiqiangwang4/MCPTox-Benchmark",
+  "commit": "f85189f9ad12504c197c7f920ab818a40657b1fa",
+  "paper_versions_reviewed": ["arXiv:2508.14925v1", "arXiv:2508.14925v2"],
+  "license_status": "No LICENSE file was present in the audited pinned tree; redistribution permission is unresolved.",
+  "files": [
+    {
+      "path": "data/upstream/f85189f9ad12504c197c7f920ab818a40657b1fa/pure_tool.json",
+      "source_url": "https://raw.githubusercontent.com/zhiqiangwang4/MCPTox-Benchmark/f85189f9ad12504c197c7f920ab818a40657b1fa/pure_tool.json",
+      "bytes": 316620,
+      "sha256": "54b1eb0e9d7b2f18465266aa9d9dfda828cd558b1269b74731ec2c5d8579e617",
+      "git_blob_sha1": "0198262328539de9d0323f3d8dd3706eb0a16aaf"
+    },
+    {
+      "path": "data/upstream/f85189f9ad12504c197c7f920ab818a40657b1fa/response_all.json",
+      "source_url": "https://raw.githubusercontent.com/zhiqiangwang4/MCPTox-Benchmark/f85189f9ad12504c197c7f920ab818a40657b1fa/response_all.json",
+      "bytes": 20666873,
+      "sha256": "79a90049be931c59e71446d6180b1d7f0d196d123d08a59bc155d142b5041c03",
+      "git_blob_sha1": "65dbe0a684471eab5717b2938223a6898f75d32d"
+    },
+    {
+      "path": "data/upstream/f85189f9ad12504c197c7f920ab818a40657b1fa/analysis.ipynb",
+      "source_url": "https://raw.githubusercontent.com/zhiqiangwang4/MCPTox-Benchmark/f85189f9ad12504c197c7f920ab818a40657b1fa/analysis.ipynb",
+      "bytes": 63422,
+      "sha256": "b02236aa30617ae72927ab5038213493e59c68d18ae878d79de0825d2f3a9156",
+      "git_blob_sha1": "b8977c8064d97a4aa34436557a354c78af71cc5d"
+    }
+  ]
+}
