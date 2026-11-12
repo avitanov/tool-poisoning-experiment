@@ -1,6 +1,8 @@
 # Local credentials and environments
 .env
 .venv/
+.uv-cache/
+.codex/
 
 # Local documentation is intentionally excluded from this repository.
 *.md
@@ -10,6 +12,9 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.pytest-*/
+.pytest_*/
+.review-temp-*/
 .ipynb_checkpoints/
 
 # Generated experiment evidence (source/config templates remain tracked)
