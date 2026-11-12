@@ -1,0 +1,6 @@
+{
+  "format_version": 1,
+  "status": "unqualified",
+  "providers": [],
+  "note": "Provider IDs, pricing, context limits, and credential variable names are intentionally unset until Unit 5 qualification."
+}

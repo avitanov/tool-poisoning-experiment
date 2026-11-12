@@ -1,0 +1,25 @@
+# Local credentials and environments
+.env
+.venv/
+
+# Local documentation is intentionally excluded from this repository.
+*.md
+*.mds
+
+# Python and notebook runtime files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated experiment evidence (source/config templates remain tracked)
+results/calls.sqlite
+results/raw/
+results/*/integrity/
+results/*/traces/
+results/*/figures/
+
+# Downloaded upstream source and derived/selected data are created in later units.
+data/upstream/
+data/derived/
+data/subsets/

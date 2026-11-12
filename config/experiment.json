@@ -1,0 +1,42 @@
+{
+  "format_version": 1,
+  "mode": "replay",
+  "run_id": "unconfigured",
+  "sampling": {
+    "selection_seed": 20261021,
+    "analysis_seed": null,
+    "pilot_attack_families": 10,
+    "pilot_controls": 5,
+    "main_attack_families_target": 100,
+    "main_controls": 20
+  },
+  "generation": {
+    "temperature": null,
+    "max_output_tokens": null,
+    "reasoning": null
+  },
+  "models": {
+    "actor": {
+      "provider": null,
+      "model": null,
+      "api_key_env": null
+    },
+    "reviewer": {
+      "provider": null,
+      "model": null,
+      "api_key_env": null
+    }
+  },
+  "budget": {
+    "project_ceiling_usd": "10.00",
+    "operational_stop_usd": "9.50"
+  },
+  "paths": {
+    "upstream": "data/upstream",
+    "derived": "data/derived",
+    "subsets": "data/subsets",
+    "call_database": "results/calls.sqlite",
+    "raw_calls": "results/raw",
+    "runs": "results"
+  }
+}
