@@ -7,6 +7,7 @@
 # Local documentation is intentionally excluded from this repository.
 *.md
 *.mds
+!README.md
 
 # Python and notebook runtime files
 __pycache__/
@@ -19,6 +20,8 @@ __pycache__/
 
 # Generated experiment evidence (source/config templates remain tracked)
 results/calls.sqlite
+results/calls.sqlite-*
+results/.collector.lock
 results/raw/
 results/*/integrity/
 results/*/traces/
@@ -28,3 +31,4 @@ results/*/figures/
 data/upstream/
 data/derived/
 data/subsets/
+data/prepared/
