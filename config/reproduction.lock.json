@@ -1,0 +1,264 @@
+{
+  "amendments": [
+    {
+      "date": "2026-11-12",
+      "previous_input_hashes": {
+        "config/experiment.json": "b972c915ff9da7ad4461d98cfa05fdc4bdbede3235112ca2d7dda1196b2fb312",
+        "src/mcptox_gateway/budget.py": "e9fa184a4baf1463e6c7b920b170cd6554611db1d786a968bbbd856609e83b65"
+      },
+      "reason": "User raised cumulative budget to USD 15; stop USD 14.50. No inference."
+    },
+    {
+      "date": "2026-11-12",
+      "previous_input_hashes": {
+        "config/free_pilot.json": null,
+        "config/free_pilot_cases.json": null,
+        "config/model_routes.json": null,
+        "prompts/actor_safety.txt": null,
+        "prompts/reviewer_base.txt": "1840cad647fa3c2c37eee5ec78e761a066f75586d5eb46f354362b44a65cbc6f",
+        "prompts/reviewer_hash_evidence.txt": "b5c62fbebc9f8b7066a314dbcb77be6b6eaa32925aa24ddb09594aa874f3f00b",
+        "src/mcptox_gateway/actor.py": null,
+        "src/mcptox_gateway/pipelines/free_pilot.py": null,
+        "src/mcptox_gateway/provider.py": "d7f4e344bea46aa918c16c519a935d4c71e12ef2e3192e99809b725ee0bc471b",
+        "src/mcptox_gateway/reviewer.py": "ee6aee2d0c84fa9c9f77c6c3221679accd103a2f332cea3404524cedf692916a"
+      },
+      "reason": "User authorized light actor warning, free engineering pilot, and one provider per model. Main readiness gates retained."
+    },
+    {
+      "date": "2026-11-12",
+      "previous_input_hashes": {
+        "prompts/reviewer_base.txt": "166a6a340cd5ec88fd279fc1869ab030767764edd8c722c8fba5e5cd9f203863",
+        "src/mcptox_gateway/pipelines/free_pilot.py": "c3c34f6c467cd797e5625d11a34f083a9abf6fde838edbef7b3001a8103f5624",
+        "src/mcptox_gateway/reviewer.py": "4afeea3f2de9031c853537419e06d132546dd0e26b95e5e0f87880a8710248a0"
+      },
+      "reason": "Implementation-only missing-semantics clarification shared by reviewers B/C; reviewer prompt v2. Benchmark, fixtures, actor inputs, and original pilot evidence unchanged."
+    },
+    {
+      "date": "2026-11-12",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/concurrent_collection.py": null,
+        "src/mcptox_gateway/provider.py": "8cd60afcad4bd74b10b8ff4e2f8ca94510a710d75c784f969e08d6473eaaa5c9",
+        "src/mcptox_gateway/rate_limits.py": null,
+        "src/mcptox_gateway/storage.py": "f84f158a63a59d597506af4b07f7d91f7eeeff0a20f9faa8558759dd7cafbcc0"
+      },
+      "reason": "User requested threadpool inference and OpenRouter rate checks. Add bounded transport concurrency with coordinator-owned persistence; main no-go retained pending prerequisites. No benchmark or saved result changes."
+    },
+    {
+      "date": "2026-11-12",
+      "previous_input_hashes": {
+        "config/qualification.json": null,
+        "src/mcptox_gateway/pipelines/qualify_models.py": null,
+        "src/mcptox_gateway/provider.py": "da22f5cb13c55aa9a986b9f0bea6a332a8de236c5a5a3554cb778e72889ee137"
+      },
+      "reason": "Authorized continuation: bounded four-worker synthetic qualification for the four remaining selected actor routes and fixed GPT-5.4 Mini reviewer candidate. Stage ceiling USD 0.15; no benchmark modifications or main freeze."
+    },
+    {
+      "date": "2026-11-13",
+      "previous_input_hashes": {
+        "config/experiment.json": "206a8530687d92434e56f93c562665e470d349bb7c4dcca3c3378e8a5021e10d",
+        "config/model_routes.json": "ab8080dd376503f277f844733b85cbcdc1bd58c31300f6176443e6a01d186138",
+        "config/providers.json": "54aa3b85db0c408583bd1baabad66f2ed5afb099f8909ad8cadf0463a87f59a0",
+        "config/reviewer_probe.json": null,
+        "config/reviewer_probe_v2.json": null,
+        "prompts/reviewer_base.txt": "895de10b5fd7e64ddfd9dd2966380bbd4f8ee5d3964768af57a3b46c1c0ba63b",
+        "src/mcptox_gateway/analysis.py": "1e0a0eb0f73ab49a27e4ca01bce1742326c6b2e0256bb78b311cc17bbb18b905",
+        "src/mcptox_gateway/budget.py": "5428c76a1478ae1ff0663d46f4527b3fb3f2acd8e05f61e362850095fc69ec35",
+        "src/mcptox_gateway/concurrent_collection.py": "f1b6134b8175c8b28865f3ea0c994f3bc490e52614a3695a2cff6a84895f5752",
+        "src/mcptox_gateway/evaluation.py": "44cb1aa95d3891ce8caa1abfd8adbf4db6b0a3d113a8c97effc393124631d7c2",
+        "src/mcptox_gateway/freeze.py": "eadb2b3e76af49b916d5343cf63e35a7f3f55c129996550cfe44bd28f9e4fc43",
+        "src/mcptox_gateway/judge.py": null,
+        "src/mcptox_gateway/pipelines/qualify_judge.py": null,
+        "src/mcptox_gateway/pipelines/qualify_models.py": "849e2c4529702e94474a0a761ea7b9f2beb6e045e13b7b3904790eb9ba122105",
+        "src/mcptox_gateway/reviewer.py": "882ff0995a54e4a64011a1c05109a0bcb720dec74bc7d19b92fe5bb112867064",
+        "src/mcptox_gateway/runner.py": "58e648f71538f89414e3adf82c0353a1ac521396405adc144985d48cde14fa35",
+        "src/mcptox_gateway/storage.py": "792e7128dc2176f1e55c293e3e0651dfad870cebdc4d249fcca13c99079afbd6"
+      },
+      "reason": "User authorized USD 20 judge-based proposal scoring, synthetic model qualification, prompt v3 and bounded HTTP 429 retry. Includes previously existing model route and provider input drift; this hash record does not qualify providers or approve a main run. Prepared outputs remain unchanged."
+    },
+    {
+      "date": "2026-11-13",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/analysis.py": "b491daadd8a6dd7e2373f78ddcc442f3df2ac4b3f9775e811d0ef8b36da90bed",
+        "src/mcptox_gateway/case_collection.py": null,
+        "src/mcptox_gateway/judge.py": "35eb2ba307347e8d4330103af3edb59d15f6222a80a552da2e5c0b580fdceb97",
+        "src/mcptox_gateway/judged_case.py": null,
+        "src/mcptox_gateway/pipelines/free_actor_pilot.py": null,
+        "src/mcptox_gateway/pipelines/pilot_benchmark_judge.py": null,
+        "src/mcptox_gateway/pipelines/pilot_raw_comparison.py": null,
+        "src/mcptox_gateway/pipelines/pilot_raw_judge.py": null,
+        "src/mcptox_gateway/pipelines/research_main.py": null,
+        "src/mcptox_gateway/pipelines/research_pilot.py": null,
+        "src/mcptox_gateway/runner.py": "f0297ec46d39b46b900cfcd658a7dba147db599af31002cf02be51ad3566075a",
+        "src/mcptox_gateway/storage.py": "bfdb137fcbcbb28258972bf784c4459171ba88c7bc4986c83109d3b0f7cd47d9"
+      },
+      "reason": "Record exploratory raw-output main pipeline and source-risk judge amendments; prepared data unchanged."
+    },
+    {
+      "date": "2026-11-13",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/main.py": "5a1fcd14f9d988528183019caed221077189bcf4caec496c263af5f64166af3c"
+      },
+      "reason": "User-requested reference-style stage orchestration; prepared output hashes unchanged."
+    },
+    {
+      "date": "2026-11-13",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/pipelines/research_multi_actor.py": null
+      },
+      "reason": "User-requested additional actor pilot/main runner; pinned source and prepared outputs unchanged."
+    },
+    {
+      "date": "2026-11-13",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/analysis.py": "90efb5bbc90fc86f46a26d961f93f6342570c7efbe9c947a3e4ee8ac427bd6e8",
+        "src/mcptox_gateway/dataset.py": "85fd47fd70430c853a0ef2dfd5829fa4cd61a1f6af8b65042faf497ec5bcdb91",
+        "src/mcptox_gateway/evaluation.py": "4a5d219ff86229029defc3e92bd8c3c4f1ad8d8c36d2a86bbbbe1a972ebace15",
+        "src/mcptox_gateway/freeze.py": "c17ac36625438d8504445f68b0f8d6337bffedbc2918f13ed0fd545ede721550",
+        "src/mcptox_gateway/qualification.py": "e89ad0c087e245ff2939fca0b46c1d013a6a57cac9fa02ff4d668af1b06d5ae6",
+        "src/mcptox_gateway/reviewer.py": "493a60f85c00f944cc12c34464d489b8ee722ddd2845eedf3f6f09286e4563cb"
+      },
+      "reason": "User-requested removal of unreferenced helpers; source and prepared outputs unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/analysis.py": "a698feba3a362523a9a65387c1948fcf7154047ad1b18489e7b531411f73d3dd",
+        "src/mcptox_gateway/evaluation.py": "a9090136f917dc372f484c67f0e63e7ab4441bac53e121034812b78c0a80aace",
+        "src/mcptox_gateway/freeze.py": "a256b111cee30e6c1ff50f360636ca7e20e75545c18921dd8214a01e67c9591d",
+        "src/mcptox_gateway/qualification.py": "c8207e0d07fd026dcbec68549e85bad4de68c053d115815e145ed1da351db073"
+      },
+      "reason": "User-requested removal of unused legacy simulation scoring, retired qualification probe, and obsolete no-go preflight. Prepared data unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/main.py": "31919236a0365cd1f6645b8398d005ca3b8fe9940ee1859972c74e3bb2249c4c",
+        "src/mcptox_gateway/pipelines/pilot_raw_comparison.py": "b0b0b2a24f81093bd0f9dd80097a8cf4898ffbfcc43365d71d9414e208d568e2",
+        "src/mcptox_gateway/pipelines/reproduce.py": null,
+        "src/mcptox_gateway/pipelines/research_main.py": "bdc06e0608d54a8489a7e7cb617ecd5611fdc694b5d02ee71776e88a95ea7e4b",
+        "src/mcptox_gateway/pipelines/research_multi_actor.py": "2298fbae4c4fd11015557e38d10e6088a2b675e25e6751154102135c8f475d83"
+      },
+      "reason": "Add user-requested fresh and replay orchestration from verified source; source and prepared dataset unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/pipelines/reproduce.py": "8f22f815bead226e8849900af6594a41915d818fd1918b269df041bc47f6bc36",
+        "src/mcptox_gateway/pipelines/research_multi_actor.py": "3eca3779002f2f0191fd32173fce4a5dda83c3651393f89243d8682f6865bff3"
+      },
+      "reason": "Finalize named reproduction and per-model pilot gate; prepared outputs unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "pyproject.toml": "a968ac3ee506ae159ae7a3df7f9120e631ffec1248841fe302672ea569cf471b",
+        "uv.lock": "9a12fdf9df02b398adc227cfbd124b3ce56bb08a9397418c2170942bb70a3903"
+      },
+      "reason": "Add pinned pandas dependency for explanatory notebook DataFrames; prepared data unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/notebook_examples.py": null
+      },
+      "reason": "Add offline selection of saved reviewer-disagreement examples; source and prepared data unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/notebook_coverage.py": null
+      },
+      "reason": "Add offline notebook call-coverage reporting; source and prepared data unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/notebook_examples.py": "3bb5541040d1e88656bab4f86e7e5e021a5d5ed4b4c149019ea59a58141a8c65"
+      },
+      "reason": "Add offline inspection of judge and reviewer example disagreements; source and prepared data unchanged."
+    },
+    {
+      "date": "2026-11-14",
+      "previous_input_hashes": {
+        "src/mcptox_gateway/notebook_labels.py": null
+      },
+      "reason": "Add offline tables of mutually exclusive saved judge labels and reviewer ablations; source and prepared data unchanged."
+    }
+  ],
+  "counts": {
+    "cases": 1348,
+    "main_attacks": 100,
+    "main_control_plans": 20,
+    "pilot_attacks": 10,
+    "pilot_control_plans": 5
+  },
+  "format_version": 1,
+  "inputs": {
+    ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+    "config/experiment.json": "fdae9d5acaac88291987b8f81e18ad334c4241a1f5770d4c9e1cb6b39226f885",
+    "config/free_pilot.json": "d0b4a0d763dd858c4255595b7938db315173696fa3eaaf672eec0a14823dc85e",
+    "config/free_pilot_cases.json": "4058e5440738fad883e557423d57a8fde857e6e784a985aca7a9640655ff19c4",
+    "config/model_routes.json": "414403ce74bd3207d9f2821269b7c7798e33f1df9f0fc0599b553de942887313",
+    "config/providers.json": "5eb6ea47fa9c93ad3f7bf479d8799b1dbcf1e42a2006677b316d090e2620bc25",
+    "config/qualification.json": "2b690fbf3a19f50296264bcae4bc9351f98c05dfaa3d7a4d93f45d3b2de16227",
+    "config/reviewer_probe.json": "485200a0b046e0fc940b9ff91d85466a06a03dee723fb96e3db2c23dd69e1382",
+    "config/reviewer_probe_v2.json": "0dd257d1289c33cd9bf74a7cfd25c115810d03c1ab1eb9e2729d20cf818610f0",
+    "data/manifest.json": "8cfb086c427e7d9dd8fdef7944a81682a20152e7639d5ccb123f74ad314383a5",
+    "prompts/actor_safety.txt": "64d627e06090208863c433af3c04d77ff7de0d83c57932644f936fac903f0c79",
+    "prompts/reviewer_base.txt": "61dea419e6c11ba007828f140ac963632a0efa0e37c61dd5413e898fa7ddfb56",
+    "prompts/reviewer_hash_evidence.txt": "f63e546cc932405172dcb48f9e77312c179c5f89565505a3510038ad97c12a33",
+    "pyproject.toml": "e5e53ea7f05613c573d7836b3561004b8a0d28552620eacd83b1d897bc0de5ce",
+    "src/mcptox_gateway/__init__.py": "f9b084e4c6b67de3e42068fdcef514ca212b3fbb0f3232a3858e1a911c3f4082",
+    "src/mcptox_gateway/actor.py": "a3b46ab046850f92a33c6fa7e1d4959e6af2c8d8ff63ce3eeae7ec9e2cdb3628",
+    "src/mcptox_gateway/analysis.py": "f021d367fa97b732b01a3684fa72a7837606a65d38f67c207306d6fad72c4529",
+    "src/mcptox_gateway/budget.py": "dd919660611dbd9a28bb2f46336115fa62c3f39adc6b8bc57a00edb92fdec108",
+    "src/mcptox_gateway/case_collection.py": "4ad672d8a7aee5e33434c35cf7ae7b1dcb915614a85b36678ecfbdf50634d1ac",
+    "src/mcptox_gateway/concurrent_collection.py": "b7095056ececa5cb65a39e2f0b3ca9b290c9cd12ebc4d3d530f3ad8e1bb21906",
+    "src/mcptox_gateway/dataset.py": "379bdf6c02a11a570c1119e9b719489d14ea628172ccce301622ecb663189156",
+    "src/mcptox_gateway/evaluation.py": "4775326e8801c0e181f5ca040fd0ae9004f21f10499a4997ff579cc809826311",
+    "src/mcptox_gateway/executor.py": "28b82a7bd983ffbcc4a26d3a5d97e92a895cb98c5f9019a6d791c6033c94b07c",
+    "src/mcptox_gateway/judge.py": "8f43da0ed1c9165e368e34d28b4b2a2db6975807d829b99d22bd78aaeb2af399",
+    "src/mcptox_gateway/judged_case.py": "6a127808ecb74df947a065acfcd3e57bb35265fec8a0960b110a6a5e0e0fa91a",
+    "src/mcptox_gateway/main.py": "3d3bf56d131853d39ebec08b92ec6abf6181b79035435158e0b38587af5a8ce2",
+    "src/mcptox_gateway/metadata.py": "59e361a1320ad0e956d45af88de292342c4276c82abf66958a02279fa0e76993",
+    "src/mcptox_gateway/normalization.py": "d215b1f0697fb11a0d484c69add95a1788923e0ff6ac3ddb59ef099fc67b50fc",
+    "src/mcptox_gateway/notebook_coverage.py": "9293956c3069e354ea04c011b3365207d04e83e280e4eb50ef0ea9ccd262a05b",
+    "src/mcptox_gateway/notebook_examples.py": "9e16e9af0a667e9b472d29e0afb1c26c101ecd81e01a1578999c0baf341626e7",
+    "src/mcptox_gateway/notebook_labels.py": "22560c0af90bd4ffa80e34bc45ae8cd75a4f40931867ae6c492998a4d2c1975a",
+    "src/mcptox_gateway/packaging.py": "ed6f11e4a9312fc10df9635001783cae6862d9603ee5d3e3edaeb81701a2d08e",
+    "src/mcptox_gateway/pipelines/__init__.py": "a529b5f3917541ab84c99a3c8c2bfcab853bf2666fff9611becca57294e670d3",
+    "src/mcptox_gateway/pipelines/common.py": "f07e193e3a5706b25b7ed450f83640b79d0af96a6bf33d3be68e0583713607b5",
+    "src/mcptox_gateway/pipelines/create_splits.py": "a6805dd35290fb23ea5f470dac1427ef5dcb295509c6a252340a1df70620d0cc",
+    "src/mcptox_gateway/pipelines/download_data.py": "a9d1405398b85fae2147f98f012eda476f64958d4b1356e09304471d11defed1",
+    "src/mcptox_gateway/pipelines/free_actor_pilot.py": "754dc23268168c15f27e0c5d77d64cc20e1067ef9936b4c23fa6edea3fc0bd3e",
+    "src/mcptox_gateway/pipelines/free_pilot.py": "91767ad9ffc5751882e31ef8069e73660f9675890837f2a5b5e727fb5707e00b",
+    "src/mcptox_gateway/pipelines/ingest.py": "0176b7c956f185062b23c85a52030a22d799262de6f16398931bf33a9ede0a40",
+    "src/mcptox_gateway/pipelines/pilot_benchmark_judge.py": "1e1dfbb750937f7e10482e430692c4ad8da7bd61681d2af19877c71aad3f7251",
+    "src/mcptox_gateway/pipelines/pilot_raw_comparison.py": "bc88e191f4251315b1c1e36aa757dbf8346eb797b426e2c7415347690c241d5b",
+    "src/mcptox_gateway/pipelines/pilot_raw_judge.py": "59959990cb53d81cc6e360eaa31842751472e950003a1aeec4899ee424636425",
+    "src/mcptox_gateway/pipelines/qualify_judge.py": "b80a3b7a5957e73fa2df04f2cf06a96190405646d1678093530d904f0b093212",
+    "src/mcptox_gateway/pipelines/qualify_models.py": "06c6dd0194aa8197cb572389ab0a55613f2493e889619e3653027e13cce8166f",
+    "src/mcptox_gateway/pipelines/reproduce.py": "7342048ebc0392305f04953ffac19a24bf9e9f9126fbb2705a0ef824d66bc89f",
+    "src/mcptox_gateway/pipelines/research_main.py": "b4ba737287d1c5fb298a4a624e851cd7147295042d320d234d33313e21493d25",
+    "src/mcptox_gateway/pipelines/research_multi_actor.py": "3696c7aa56f881517f456c6ff552819ca9b0d7e2f90615ee7c6e0cab604e8034",
+    "src/mcptox_gateway/pipelines/research_pilot.py": "df826da30a349e5af3456dccfd23de8149ae3d0a2a64f2f6b3877d3329101749",
+    "src/mcptox_gateway/pipelines/verify.py": "25b2817cbc89729303ce8eeefd9231e70c40ebc133c2684023fe9e6f3611921d",
+    "src/mcptox_gateway/provider.py": "c5b0b2b98c33d72cdcfee3d2b3224ee4eaa3726fc7b8b39b06411a98016b1272",
+    "src/mcptox_gateway/qualification.py": "2b1454c17dfad0b5d67c33fed19d7fd20d5899a454d4fbb8d30a2aaed546e20e",
+    "src/mcptox_gateway/rate_limits.py": "836dcd5bcbb390a8dbbbfc778fbb7a8db9c53b6e8b9b5103f434ebeb97a32579",
+    "src/mcptox_gateway/reviewer.py": "a207537889399e7197b7ffc82e735f934fc455349a0e9b3e598c2147cf596da4",
+    "src/mcptox_gateway/runner.py": "d578ee1636ec3297836dc1cc87de3c8a3619d5fe5854a5a4a8f8871cc69c4cab",
+    "src/mcptox_gateway/sampling.py": "0fb68e3a16bc31d00bfc35eb3280bbbbe7e6eeed1290c7d52227a4e538878cbd",
+    "src/mcptox_gateway/settings.py": "e1f0cb8ca85ec9b4986c2e776bfe014474001844aec43e3ed593b8ec4ef2d154",
+    "src/mcptox_gateway/storage.py": "df1b89e5a9224d9c41a3675e80cd222aa42ef42c8eadaf45e1a2fe9fc339d8da",
+    "uv.lock": "a7e65df90e03c432aa3245e369d0bd62ed8c40fed15e36cf729b943b68a84df1"
+  },
+  "outputs": {
+    "data/prepared/attack_selection.json": "984d43a9401fc37513ebe2c9e81356b6004afff9febfcb810a70a00d0e4c9a77",
+    "data/prepared/cases.jsonl": "247b5d936b385b5a7d368cc7f41875d8ca6640cc1c5a6f2f27d41d83a38536c0",
+    "data/prepared/control_plans.json": "35b03cee04f4a13decad1c7ff52e90d85ff69c5678a03696de48a4350afc21c9",
+    "data/prepared/reference_candidates.jsonl": "b0fe1db4bd2b6dd975bd38c9822584fc897e7ff00bd52df40b9c54961cb76262"
+  },
+  "scope": "preparation_only_not_main_run_freeze",
+  "source_commit": "f85189f9ad12504c197c7f920ab818a40657b1fa"
+}

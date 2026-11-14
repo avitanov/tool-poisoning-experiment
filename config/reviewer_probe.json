@@ -1,0 +1,13 @@
+{
+  "run_id": "reviewer-minimax-qualification-2026-11-13-v1",
+  "scope": "synthetic reviewer candidate probes, not benchmark results",
+  "max_workers": 1,
+  "min_interval_seconds": 0.5,
+  "timeout_seconds": 90,
+  "maximum_stage_charge_usd": "0.15",
+  "reviewer_candidate": "minimax/minimax-m3.1-flash",
+  "generation": {
+    "minimax/minimax-m3.1-flash": {"max_tokens": 2048, "reasoning": {"effort": "low"}}
+  },
+  "note": "One actor format and four blinded B/C reviewer probes on synthetic data. Single fixed MiniMax provider, no automatic retries beyond documented rate-limit rejections."
+}

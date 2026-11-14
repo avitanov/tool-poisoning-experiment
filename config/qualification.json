@@ -1,0 +1,17 @@
+{
+  "run_id": "model-qualification-2026-11-12-v1",
+  "scope": "synthetic_transport_and_format_checks_not_benchmark_results",
+  "max_workers": 4,
+  "min_interval_seconds": 0.5,
+  "timeout_seconds": 60,
+  "maximum_stage_charge_usd": "0.15",
+  "reviewer_candidate": "openai/gpt-5.4-mini",
+  "generation": {
+    "openai/gpt-5.4-mini": {"max_tokens": 2048, "reasoning": {"effort": "none"}},
+    "qwen/qwen3.5-397b-a17b": {"max_tokens": 2048, "reasoning": {"enabled": false}},
+    "minimax/minimax-m3.1-flash": {"max_tokens": 2048, "reasoning": {"effort": "low"}},
+    "deepseek/deepseek-v4.1-flash-1017": {"max_tokens": 2048, "reasoning": {"effort": "none"}}
+  },
+  "existing_free_evidence": "results/engineering-pilot-2026-11-12-v1/summary.json",
+  "note": "Four actor-format probes plus four reviewer probes. Reuse completed responses; no automatic retries, main collection, or benchmark changes."
+}

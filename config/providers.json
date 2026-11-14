@@ -1,6 +1,46 @@
 {
-  "format_version": 1,
-  "status": "unqualified",
-  "providers": [],
-  "note": "Provider IDs, pricing, context limits, and credential variable names are intentionally unset until Unit 5 qualification."
+  "actors": [
+    {
+      "evidence": "e250a838672fcaff39755a51e9d0b4dfc822f6da8859c5303b1a328335b6d187",
+      "model": "openai/gpt-5.4-mini",
+      "provider_slug": "openai",
+      "status": "actor_format_probe_passed"
+    },
+    {
+      "evidence": "d50c0ef64b7f7bc5ddd9bfe806f2bb5c9f6e329ad34d376d0ed69f558482cc69",
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider_slug": "alibaba",
+      "status": "qualification_failed"
+    },
+    {
+      "evidence": "26706eba6fdcb555de69c7296c5c6bb302be1b74bd1c057a63aa15347cd15cb6",
+      "model": "minimax/minimax-m3.1-flash",
+      "provider_slug": "minimax",
+      "status": "actor_format_probe_passed"
+    },
+    {
+      "evidence": "results/engineering-pilot-2026-11-12-v1/summary.json",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "provider_slug": "nvidia",
+      "status": "free_engineering_pilot_passed"
+    },
+    {
+      "evidence": "5f7b355e05eb6e6c5ce259fc952aeb62c83fe663536240ef17c822939156e042",
+      "model": "deepseek/deepseek-v4.1-flash-1017",
+      "provider_slug": "deepseek",
+      "status": "qualification_failed"
+    }
+  ],
+  "format_version": 2,
+  "free_engineering_report": "results/engineering-pilot-2026-11-12-v1/summary.json",
+  "main_collection_ready": false,
+  "note": "Transport/format evidence only; this does not approve benchmark references, labels, settings or a main manifest. Failed fixed routes were not retried or substituted.",
+  "qualification_report": "results/model-qualification-2026-11-12-v1/summary.json",
+  "reviewer_candidate": {
+    "model": "openai/gpt-5.4-mini",
+    "provider_slug": "openai",
+    "reason": "C blocked the missing-reference qualification probe; the frozen prompt required uncertain.",
+    "status": "format_valid_behavior_check_failed"
+  },
+  "status": "partially_qualified"
 }

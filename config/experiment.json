@@ -28,8 +28,8 @@
     }
   },
   "budget": {
-    "project_ceiling_usd": "10.00",
-    "operational_stop_usd": "9.50"
+    "project_ceiling_usd": "20.00",
+    "operational_stop_usd": "19.50"
   },
   "paths": {
     "upstream": "data/upstream",

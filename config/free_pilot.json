@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "run_id": "engineering-pilot-2026-11-12-v1",
+  "scope": "synthetic_engineering_pilot_not_benchmark_results",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "provider_slug": "nvidia",
+  "returned_provider": "Nvidia",
+  "api_key_env": "OPENROUTER_API_KEY",
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 1024,
+    "reasoning": {"effort": "none"},
+    "seed": 20261021
+  },
+  "timeout_seconds": 60,
+  "minimum_interval_seconds": 3.2,
+  "review_order_seed": 20261021,
+  "context_length": 1000000,
+  "main_collection_authorized": false,
+  "note": "Free transport pilot only. This does not replace the planned 10 benchmark attacks and 5 reviewed controls or select the final experiment reviewer."
+}

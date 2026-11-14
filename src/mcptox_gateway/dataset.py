@@ -5,10 +5,9 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-from collections.abc import Iterable, Iterator
+from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
-
 
 SNAPSHOT_COMMIT = "f85189f9ad12504c197c7f920ab818a40657b1fa"
 RESPONSE_FILENAME = "response_all.json"
@@ -270,17 +269,3 @@ def extract_clean_references(archive_path: Path | str) -> list[dict[str, Any]]:
                 }
             )
     return references
-
-
-def write_jsonl(path: Path | str, records: Iterable[dict[str, Any]]) -> None:
-    """Write JSONL deterministically, retaining non-ASCII source text."""
-
-    destination = Path(path)
-    destination.parent.mkdir(parents=True, exist_ok=True)
-    lines = [
-        json.dumps(record, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-        for record in records
-    ]
-    destination.write_text(
-        "\n".join(lines) + ("\n" if lines else ""), encoding="utf-8", newline="\n"
-    )
