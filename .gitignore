@@ -8,6 +8,7 @@
 *.md
 *.mds
 !README.md
+!explanation.md
 
 # Python and notebook runtime files
 __pycache__/
