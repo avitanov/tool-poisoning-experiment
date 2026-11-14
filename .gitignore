@@ -19,6 +19,8 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Generated experiment evidence (source/config templates remain tracked)
+results/
+output/
 results/calls.sqlite
 results/calls.sqlite-*
 results/.collector.lock
